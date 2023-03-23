@@ -1,7 +1,7 @@
 * This PinTool allows users to add markers in the code.
 * As an example use case, the code also selectively instruments the branch instructions based on whether they lie in the region of interest or not.
 * The region of interest is marked by two special marker values: START and END which are internally mapped to -1 and -2 in the markers.h file.
-* Any user can include the markers.h file in their code and use the add_marker API. This header defines a macro to add a specific sequence of
+* Any user can include the markers.h file in their code and use the add\_marker API. This header defines a macro to add a specific sequence of
   instructions in the binary which is the recognized by Pin. The sequence of instructions is:
   ```
   mov    $0x1e6c,%rcx
