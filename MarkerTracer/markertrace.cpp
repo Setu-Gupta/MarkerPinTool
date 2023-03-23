@@ -23,7 +23,7 @@ KNOB<string> KnobOutputFile(KNOB_MODE_WRITEONCE, "pintool", "o", "markertrace.ou
 KNOB<INT64> KnobMagic(KNOB_MODE_WRITEONCE, "pintool", "m", "7788", "specify the magic marker number");
 
 // This function is called for every marker
-VOID printMarker(UINT64 rcx, INT64 arg, UINT64 expected)
+VOID printMarker(INT64 rcx, INT64 arg, UINT64 expected)
 {
         // Only print if RCX has the magic value
         if(rcx != expected)
