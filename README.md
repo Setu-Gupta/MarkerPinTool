@@ -1,7 +1,7 @@
 # Overview
 * This PinTool allows users to add markers in the code.
 * As an example use case, the code also selectively instruments the branch instructions based on whether they lie in the region of interest or not.
-* The region of interest is marked by two special marker values: START and END which are internally mapped to -1 and -2 in the markers.h file.
+* The region of interest is marked by two special marker values: `START` and `END` which are internally mapped to -1 and -2 in the markers.h file.
 * Any user can include the markers.h file in their code and use the add\_marker API. This header defines a macro to add a specific sequence of
   instructions in the binary which is the recognized by Pin. The sequence of instructions is:
   ```
@@ -27,7 +27,7 @@
 
 Note: that the `marker.h` file provides a macro named `add_marker` which allows you to add macros to your code. It also lets you add an argument
 to this macro which can then be read by Pin. This macro gets stored in the RDX register which can then be read at runtime by Pin. There are two
-special arguments which are also defined called START and END which map to -1 and -2 repectively. You can use these macros to mark the region of
+special arguments which are also defined called `START` and `END` which map to -1 and -2 repectively. You can use these macros to mark the region of
 interest. In the provided example, the region of interest is the `main` function and within that region of interest the PinTool selectively
 processes the branch instructions. Please refer to the attached example in the `pin_marker_test` dirctory to get an idea of how to use this API
 and how to configure the build system.
